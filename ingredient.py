@@ -13,8 +13,8 @@ class Ingredient:
   
   def __init__(self, name: str, price: float = 0, quantity: float = 1, unit: Str = 'g', calories: int = 0):
     self.name = name
-    self.quantity = quantity
     self.price = price
+    self.quantity = quantity # Does this need to exist?
     self.unit = Unit[unit]
     self.calories = calories
     self.calories_per_unit = calories/quantity
@@ -22,6 +22,7 @@ class Ingredient:
   
   def get_price(self, per_unit=False):
     return self.price_per_unit if per_unit else self.price
+
 
 
 if __name__ == "__main__":
